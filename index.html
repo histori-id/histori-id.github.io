@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>histori-id | Proyek Penelitian NLP Sejarah Indonesia</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --text: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary);
+            color: #f8fafc;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -0.025em;
+        }
+        header p {
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: -2rem auto 2rem;
+            padding: 0 1.5rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--accent);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+        }
+        .badge.completed { background: #dcfce7; color: #166534; }
+        .badge.planned { background: #fef9c3; color: #854d0e; }
+        .badge.active { background: #dbeafe; color: #1e40af; }
+        
+        .description {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        .meta-info {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>histori-id</h1>
+        <p>Mendukung Penelitian Natural Language Processing untuk Teks Sejarah Indonesia</p>
+    </header>
+
+    <div class="container">
+        <div class="projects-grid">
+            
+            <!-- HistoriKorpus -->
+            <div class="card">
+                <h2>HistoriKorpus <span class="badge completed">Tersedia</span></h2>
+                <p class="description">
+                    Dataset benchmark koreksi post-OCR paralel untuk surat kabar bersejarah Indonesia periode 1946-1965. Sumber data didapatkan dari repositori Khastara Perpustakaan Nasional RI. Menghadirkan teks hasil OCR yang disandingkan dengan transkripsi manual yang telah dikurasi.
+                </p>
+                <div class="meta-info">
+                    <strong>Lisensi:</strong> CC BY 4.0 (Transkripsi) & PDM 1.0 (Scan Gambar)
+                </div>
+            </div>
+
+            <!-- HistoriNLI -->
+            <div class="card">
+                <h2>HistoriNLI <span class="badge planned">Tahap Perencanaan</span></h2>
+                <p class="description">
+                    Pengembangan dataset dan eksplorasi Explainable Natural Language Inference (XNLI) yang difokuskan pada kritik sejarah dan analisis teks lawas, mengandalkan arsitektur Small Language Models (SLM) dengan pipeline Explain-then-Predict.
+                </p>
+                <div class="meta-info">
+                    <strong>Fokus:</strong> XNLI, Small Language Models, Kritik Sejarah
+                </div>
+            </div>
+
+            <!-- e-SNLI Indonesia -->
+            <div class="card">
+                <h2>e-SNLI Indonesia <span class="badge active">Dalam Pengembangan</span></h2>
+                <p class="description">
+                    Adaptasi bahasa Indonesia dari korpus Explainable Stanford Natural Language Inference (e-SNLI) untuk melatih dan mengevaluasi kemampuan penalaran dan pemberian penjelasan (explanation) pada model bahasa.
+                </p>
+                <div class="meta-info">
+                    <strong>Fokus:</strong> Natural Language Inference, Terjemahan Paralel
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 histori-id. Kunjungi repositori kami di <a href="https://github.com/histori-id">GitHub</a> atau akses dataset melalui Mendeley Data.</p>
+    </footer>
+
+</body>
+</html>
